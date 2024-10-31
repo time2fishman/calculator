@@ -3,14 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: black;
+  --foreground: white;
+  --orange: #ee8801;
+  --hoverOrange: #f0ab51;
+  --activeOrange: #e69429;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: white;
+    --foreground: #0a0a0a;
+    --orange: #ee8801;
+    --hoverOrange: #f0ab51;
+    --activeOrange: #e69429;
   }
 }
 
@@ -18,4 +24,19 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  ::placeholder {
+    color: white;
+  }
+}
+
+.orange-button {
+  background: var(--orange);
+}
+
+.orange-button:hover {
+  background: var(--hoverOrange);
+}
+
+.orange-button:active {
+  background: var(--activeOrange);
 }
